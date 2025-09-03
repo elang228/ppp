@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<title>elang</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Question</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .question { font-size: 1.5em; margin-bottom: 20px; }
+        .btn { padding: 10px 30px; font-size: 1em; margin: 10px; cursor: pointer; }
+        .answer { margin-top: 30px; font-size: 1.2em; color: #333; }
+    </style>
+</head>
+<body>
+    <div class="question" id="question">Elang baik, ganteng, pinter, rajin, soleh?</div>
+    <button class="btn" onclick="showAnswer('Yes')">Yes</button>
+    <button class="btn" onclick="showAnswer('No')">No</button>
+    <div class="answer" id="answer"></div>
+
+    <script>
+        function showAnswer(response) {
+            const answerDiv = document.getElementById('answer');
+            if (response === 'Yes') {
+                answerDiv.textContent = "bagus bagus emang faktanya";
+            } else {
+                answerDiv.textContent = "bohong=pilih yes";
+            }
+        }
+    </script>
+</body>
+</html>
